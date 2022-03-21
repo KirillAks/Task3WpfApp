@@ -34,14 +34,16 @@
                     Width="200"
                     SizeChanged="ComboBox_SizeChanged"
                     SelectionChanged="ComboBox_SelectionChanged"
-                    ItemsSource="{StaticResource fonts}"/>                           
+                    ItemsSource="{StaticResource fonts}"
+                    Style="{DynamicResource ComboboxStyle}"/>                           
                 <ComboBox
                     Margin="5"
                     Padding="5"
                     SelectedIndex="2"
                     Width="50"
                     SelectionChanged="ComboBox_SelectionChanged_1"
-                    ItemsSource="{StaticResource sizes}"/>                
+                    ItemsSource="{StaticResource sizes}"
+                    Style="{DynamicResource ComboboxStyle}"/>                
             </ToolBar>
             <ToolBar Margin="5" Padding="5">
                 <ToggleButton Click="Button_Click">
@@ -62,6 +64,14 @@
                     <RadioButton Content="Чёрный" IsChecked="True" Checked="RadioButton_Checked"/>
                     <RadioButton Content="Красный" Checked="RadioButton_Checked_1"/>
                 </StackPanel>
+                <ComboBox Name="themes"
+                          Width="150"
+                          SelectedIndex="0"
+                          Margin="5" SelectionChanged="themes_SelectionChanged"
+                          Style="{DynamicResource ComboboxStyle}">
+                    <TextBlock Text="Светлая"/>
+                    <TextBlock Text="Тёмная"/>
+                </ComboBox>
             </ToolBar>
         </ToolBarTray>
         <TextBox x:Name="textBox" Grid.Row="2" Margin="5" Padding="5" FontSize="16" FontFamily="Arial" TextWrapping="Wrap">
